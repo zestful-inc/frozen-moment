@@ -1,10 +1,10 @@
 (function (global, factory) {
   if (typeof exports === 'object') {
-    module.exports = factory(require('moment'));
+    module.exports = factory;
   } else if (typeof define === 'function' && define.amd) {
-    define(['moment'], factory);
+    define(['frozenMoment'], () => factory);
   } else {
-    global.moment = factory(global.moment);
+    global.frozenMoment = factory;
   }
 }(this, function (moment) {
   if (!moment) {
